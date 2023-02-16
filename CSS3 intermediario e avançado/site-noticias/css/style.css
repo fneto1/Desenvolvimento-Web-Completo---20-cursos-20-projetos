@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+header{
+    width: 100%;
+    background: url('/img/fundo.png');
+    height: 233px;
+    position: relative;
+   
+}
+
+#caixa{
+    width: 750px;
+    margin: 0 auto;
+    height: 180px;
+    position: relative;
+    background: url(/img/detalhe-topo.png) no-repeat top right;
+}
+
+.logo{
+    padding: 10px;
+}
+
+
+#caixa ul{
+    background-color: rgba(255, 0, 0, 0.677);
+    border: 1px solid rgba(124, 11, 11, 0.959);
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: 40px;
+    display: flex;
+   
+    
+}
+#caixa li{
+    margin: 0;
+    border-right: 1px solid rgba(124, 11, 11, 0.959);
+}
+
+#caixa li:last-child{
+    border-right: none;
+}
+
+
+#caixa a{
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em 1.5em;
+    line-height: 1.9em;
+
+    /* border: 1px solid white; */
+
+    
+    
+}
+
+#caixa a:hover{
+    background-color:  rgba(124, 11, 11, 0.959);
+}
+
+
+main{
+    width: 750px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+main img{
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #CCC;
+}
+
+.esquerda{
+    width: 20%;
+}
+
+.newsletter{
+    background-color: #fff;
+    padding: 5px;
+
+}
+
+.cadastro{
+    margin-bottom: 5px;
+}
+
+input[type='email']{
+    margin-right: 10px;
+    width: 90%;
+}
+
+.entrevistas, .news, .mundo, .destaque, .ultima-entrevista, .recentes{
+    background: url(/img/fundo-caixa.png);
+    padding: 4px;
+    margin-bottom: 10px;
+
+}
+
+.entrevistas li, .noticias-mundo li, .noticias-recentes li{
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+
+.entrevistas li a{
+    padding: 10px;
+    display: block;
+}
+
+
+.entrevistas a:hover{
+    background-color: #294C71;
+    color: #fff;
+}
+
+main h4{
+    background-color: #294C71;
+    margin: 2px 3px;
+    color: #fff;
+    padding: 5px;
+}
+
+main h5{
+    background-color: rgb(255, 0, 0);
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #fff;
+    padding: 5px;
+}
+
+.fundo{
+    background-color: #fff;
+    margin: 5px 5px;
+}
+
+.centro{
+    width: 37%;
+}
+
+.noticias-mundo ul li a, .noticias-recentes ul li a{
+    display: flex;
+    gap: 5px;
+    background-color: #fff;
+    padding: 5px;
+}
+
+.img-mundo{
+    width: 50%;
+    border: none;
+}
+
+
+.direita{
+    width: 37%;
+}
+
+.conteudo{
+    padding: 5px;
+
+}
+
+.conteudo p{
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.leia-mais{
+    background-color: #294C71;
+    color: #fff;
+    padding: 5px;
+    display: inline-block;
+}

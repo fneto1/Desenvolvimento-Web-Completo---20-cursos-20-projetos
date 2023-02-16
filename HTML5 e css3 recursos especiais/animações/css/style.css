@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+}
+
+
+.caixa{
+    width: 300px;
+    height: 300px;
+    margin: 30px 30px;
+    background-color: #b9c941;
+    position: relative;
+/*     animation-name: animacao-caixa;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: 2s;
+    animation-direction: alternate; */
+
+    /*ou*/
+
+    animation: animacao-caixa 1s 2s infinite linear alternate;
+}
+
+@keyframes animacao-caixa{
+    from{
+        background-color: #b9c941;
+        border-radius: 0%;
+        top: 0px;
+        left: 0px;
+    }
+
+    to {
+        background-color: red;
+        border-radius: 50%;
+        top: 200px;
+        left: 200px;
+    }
+}
+

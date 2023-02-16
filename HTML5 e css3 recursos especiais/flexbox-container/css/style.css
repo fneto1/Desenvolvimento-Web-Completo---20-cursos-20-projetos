@@ -1,0 +1,35 @@
+#conteudo{
+    background: #dcdcdc;
+
+    height: 400px;
+    display: flex;
+
+    /*
+    flex-direction: row|row-reverse|column|column-reverse
+    */
+    flex-direction: row;
+
+    /*
+    flex-wrap: nowrap|wrap|wrap-reverse
+    */
+    flex-wrap: wrap;
+
+    /*
+    justify-content: flex-start|flex-end|center|space-between|space-around
+    */
+    justify-content: space-around;
+
+    /*
+    align-items: stretch|center|flex-start|flex-end|baseline
+    */
+    align-items: center;
+
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background: white;
+    border: 1px solid gray;
+    margin: 10px;
+}

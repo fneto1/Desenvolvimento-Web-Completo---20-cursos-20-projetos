@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<body>
+
+    <table border="2px" width = '100%'>
+
+        <tr> <!--Table Row: linhas da tabela; -->
+            <th>Código</th> <!--Table head: altera o estilo da fonte da linha -->
+            <th>Produto</th>
+            <th>Preço</th>
+        </tr>
+
+        <tr>
+            <td>001</td> <!--Table data: colunas da tabela-->
+            <td>Notebook</td>
+            <td>R$ 2.500,00</td>
+        </tr>
+
+        <tr>
+            <td>002</td> <!--Table data: colunas da tabela-->
+            <td>Mouse</td>
+            <td>R$ 149,00</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Desconto</td> <!--rowspan: mescla celulas em colunas-->
+            <td colspan="2">Cupom: R$ 10,00 OFF</td> <!--colspan: mescla celulas em linha-->
+        </tr>
+
+        <tr>
+            <td colspan="2">Cupom: R$ 20,00 OFF</td>
+        </tr>
+
+        <tr>
+            <td> Total </td>
+            <td colspan="2">R$ XXXXXX</td>  
+        </tr>
+    </table>
+    
+</body>
+</html>

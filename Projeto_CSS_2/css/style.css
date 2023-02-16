@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #e6e6e6;
+    font-size: 1em;
+}
+
+/*
+***HEADER***
+*/
+
+header{
+    width: 100%;
+    background-color: #f7b600;
+    text-align: center;
+}
+
+.titulo{
+    padding: 15px;
+    font-weight: bold;
+    color: #4e4e4e;
+    font-size: 1.5em;
+}
+
+.blog{
+    color: white;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.menu a:hover{
+    color: #f7b600;
+    background-color: white;
+}
+
+/*
+***ÁREA DE NOTICIAS***
+*/
+
+main{
+    width: 920px;
+    margin: 10px auto;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.area-noticias{
+    width: 660px;
+}
+
+.noticia{
+    padding: 20px;
+    background-color:white;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.noticia h2{
+    color: #f7b600;
+    margin-bottom: 5px;
+}
+
+.noticia h6{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #CCC;
+}
+
+.noticia img{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.noticia p{
+    font-size: 0.8em;
+    margin: 7px 0;
+}
+
+
+
+/*
+***ÁREA LATERAL***
+*/
+
+
+.area-lateral{
+    width: 240px;
+
+}
+
+.postagens-recentes, .categorias{
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+.area-lateral h4{
+    background-color: gray;
+    padding: 5px;
+}
+
+.recentes{
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+.recentes a, .noticia a{
+    text-decoration: none;
+    color: #f7b600;
+}
+
+.recentes a:hover, .noticia a:hover{
+    color: white;
+    background-color: #f7b600;
+    padding: 1px;
+}
+
+.menu-categorias a{
+    text-decoration: none;
+    color: #f7b600;
+    padding: 1px;
+}
+
+.menu-categorias a:hover{
+    color: white;
+    background-color: #f7b600;
+}
+
+.menu-categorias li{
+    margin: 2px 0;
+}
+
+/*
+***RODAPÉ***
+*/
+
+footer{
+    width: 920px;
+    margin: 0px auto;
+    background-color: #f7b600;
+    text-align: center;
+    padding: 15px;
+}
