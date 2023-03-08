@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - Screen</title>
+</head>
+
+<script>
+    let height = window.screen.availHeight
+    let width = window.screen.availWidth
+
+    document.write("Altura da tela: " + height + "<br /> ")
+    document.write("Largura da tela: " + width + "<br> <br>")
+
+    if(width < 500){
+        document.write("Largura tela mobile")
+    } else {
+        document.write("Largura tela desktop")
+    }
+</script>
+
+<body>
+
+</body>
+</html>

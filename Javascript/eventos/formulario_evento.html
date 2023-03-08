@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento - Formulário</title>
+
+    <script>
+        function eventoDisparado() {
+            alert('Alerta!')
+        }
+    </script>
+</head>
+
+
+<body>
+
+    <form>
+        <input type="text" onfocus="console.log('Don pollo')" onblur="console.log('king of ohio')">
+    </form>
+
+    <select onchange="console.log('testando')">
+        <option>-- Selecione --</option>
+        <option value="1">-- Primeiro --</option>
+        <option value="2">-- Segundo --</option>
+    </select>
+
+
+
+</body>
+
+</html>

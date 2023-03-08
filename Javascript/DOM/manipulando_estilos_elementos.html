@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Manipulando valores de inputs (text)</title>
+
+
+</head>
+
+
+<body>
+
+    <h3>Manipulando estilos</h3>
+
+    <button onclick="alteraFundo('red')">Vermelho</button>
+    <button onclick="alteraFundo('green')">Verde</button>
+    <button onclick="alteraFundo('blue')">Azul</button>
+
+    <hr>
+
+    <div id="fundo" style="border: 1px solid black; width: 200px; height: 200px;"></div>
+
+</body>
+
+<script>
+
+    function alteraFundo(cor){
+        document.getElementById('fundo').style.backgroundColor = cor;
+    }
+
+</script>
+
+</html>

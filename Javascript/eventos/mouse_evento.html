@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento - Mouse</title>
+
+    <script>
+        function eventoDisparado() {
+            alert('Alerta!')
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="container" style="display: flex; justify-content: space-around;">
+        <div onclick="eventoDisparado()" style="background-color: #ccc; width: 150px; height: 150px;">
+            <p style="text-align: center;">
+                onclick
+            </p>
+        </div>
+        <div ondblclick="eventoDisparado()" style="background-color: red; width: 150px; height: 150px;">
+            <p style="text-align: center;">
+                ondblclick
+            </p>
+        </div>
+        <div onmouseup="eventoDisparado()" style="background-color: lightblue; width: 150px; height: 150px;">
+            <p style="text-align: center;">
+                onmouseup
+            </p>
+        </div>
+        <div onmouseover="eventoDisparado()" style="background-color: lightgoldenrodyellow; width: 150px; height: 150px;">
+            <p style="text-align: center;">
+                onmouseover
+            </p>
+        </div>
+        <div onmouseout="eventoDisparado()" style="background-color: lightgrey; width: 150px; height: 150px;">
+            <p style="text-align: center;">
+                onmouseout
+            </p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
