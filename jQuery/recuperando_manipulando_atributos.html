@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(() => {
+        setInterval(() => {
+          let x = $("img").attr("src");
+
+          if (x == "img/esfera_1.png") {
+            x = $("img").attr("src", "img/esfera_2.png");
+          } else {
+            x = $("img").attr("src", "img/esfera_1.png");
+          }
+          //x == 'img/esfera_1.png' ? $('img').attr('src', 'img/esfera_2.png') : $('img').attr('src', 'img/esfera_1.png')
+        }, 200);
+
+        setInterval(() => {
+          let y = $("div").attr("style");
+
+          y == "background-color: red; width: 100px; height: 100px;"
+            ? $("div").attr(
+                "style",
+                "background-color: blue; width: 300px; height: 300px;"
+              )
+            : $("div").attr(
+                "style",
+                "background-color: red; width: 100px; height: 100px;"
+              );
+        }, 200);
+      });
+    </script>
+
+    <title>Recuperando e manipulando os atributos dos elementos HTML</title>
+  </head>
+
+  <body>
+    <img src="img/esfera_1.png" border="5" />
+
+    <div style="background-color: red; width: 100px; height: 100px"></div>
+  </body>
+</html>

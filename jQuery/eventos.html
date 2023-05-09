@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery</title>
+
+    <style>
+		#divExterna{
+			background-color: #ccc;
+			width: 80px;
+			height: 80px;
+			padding: 70px;
+		}
+
+		#divInterna{
+			background-color: blue;
+			width: 80px;
+			height: 80px;
+		}
+
+		.inputFocado{
+			background-color: red;
+		}
+	</style>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(() => {
+        //onload
+        $("#onload").html("Página carregada").css("font-weight", "bold");
+
+        //scroll
+        $(window).scroll(() => {
+          $("#scroll").html("Scroll acionado").css("font-weight", "bold");
+        });
+
+        /* $("#div1").scroll(function () {
+          $(this).css("background-color", "blue");
+        }); */
+
+        $("#div1").scroll((e) => {
+          $(e.target).css("background-color", "blue");
+        });
+
+        //resize
+        $(window).resize(() => {
+          $("#resize").html("Resize acionado").css("font-weight", "bold");
+        });
+
+		//mousedown
+		$('#btn1').mousedown(()=>{
+			$('#div2').css('background-color', 'green')
+		})
+
+		//mouseup
+		$('#btn1').mouseup(()=>{
+			$('#div2').css('width', '300px')
+		})
+
+		//click
+		$('#btn1').click(()=>{
+			$('#div2').css('background-color', 'blue')
+		})
+
+		//dblclick
+		$('#btn2').dblclick(()=>{
+			$('#div2').css('height', '200px')
+		})
+
+		//mousemove
+		$('#div2').mousemove((e)=>{
+			$('#resultado').html(`x: ${e.offsetX}, y: ${e.offsetY}`)
+		})
+
+		//mouseover e mouseout (antigos)
+
+		//mouseover
+		$('#divExterna').mouseover(()=>{
+			$('#resultadoDiv1').html('entrou')
+			//console.log("Div Externa (entrou)")
+		})
+
+		$('#divInterna').mouseover(()=>{
+			$('#resultadoDiv2').html('entrou')
+			//console.log("Div Interna (entrou)")
+		})
+
+		//mouseout
+		$('#divExterna').mouseout(()=>{
+			$('#resultadoDiv1').html('saiu')
+			//console.log("Div Externa (saiu)")
+		})
+
+		$('#divInterna').mouseout(()=>{
+			$('#resultadoDiv2').html('saiu')
+			//console.log("Div Interna (saiu)")
+		})
+
+		//mouseenter e mouseleave (novos)
+
+		//mouseenter
+		$('#divExterna').mouseenter((e)=>{
+			$(e.target).css('border', '1px solid')
+			console.log("Div Externa (entrou)")
+		})
+
+		$('#divInterna').mouseenter((e)=>{
+			$(e.target).css('border', '1px solid')
+			console.log("Div Interna (entrou)")
+		})
+
+		//mouseleave
+		$('#divExterna').mouseleave((e)=>{
+			$(e.target).css('border', 'none')
+			console.log("Div Externa (saiu)")
+		})
+
+		$('#divInterna').mouseleave((e)=>{
+			$(e.target).css('border', '1px solid')
+			console.log("Div Interna (saiu)")
+		})
+
+		//teclado
+		//keydown
+		$('#teclado').keydown(()=>{
+			$('#resultadoTecla').html('Tecla pressionada (keydown)')
+		})
+
+		//keyup
+/* 		$('#teclado').keyup((e)=>{
+			$('#resultadoTecla').html('Tecla pressionada (keyup)')
+			console.log(e)
+
+			if(e.keyCode == 13){
+				let txt = $(e.target).val()
+				$('#resultadoTecla').html(txt)
+				$(e.target).val('')
+			}
+		}) */
+
+		$('#teclado').keyup((e)=>{
+			//$('#resultadoTecla').html('Tecla pressionada (keydown)')
+			if(e.keyCode < 97 || e.keyCode >100){
+				let txt = $(e.target).val()
+				txt = txt.slice(0, -1)
+
+				$(e.target).val(txt)
+			}
+		})
+
+		//formularo
+		//focus
+		$('#nome, #email').focus((e)=>{
+			console.log('foco (nome e email)')
+			$(e.target).addClass('inputFocado')
+
+		})
+
+		//blur
+		$('#nome, #email').blur((e)=>{
+			console.log('perdeu o foco (nome e email)')
+			$(e.target).removeClass('inputFocado')
+		})
+
+		//change
+		$('#opcao').change((e)=>{
+			console.log($(e.target).val())
+		})
+
+		//submit
+		$('#form').submit((e)=>{
+			e.preventDefault()
+			console.log('Formulario enviado')
+		})
+
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="topo">
+      <h1>Eventos</h1>
+    </div>
+
+    <div>
+      <h3>Browser</h3>
+      <span>Onload: </span><span id="onload">?</span><br />
+      <span>Scroll: </span><span id="scroll">?</span><br />
+      <span>Resize window: </span><span id="resize">?</span>
+      <div id="div1" style=" height: 100px; width: 100px; border: solid 1px; overflow-y: scroll;">
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      </div>
+      <hr />
+
+      <h3>Mouse</h3>
+      <button id="btn1" type="button">Clique aqui</button>
+      <button id="btn2" type="button">Clique aqui 2x</button>
+      <div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px;"></div>
+      <span>Resultado do evento sobre a div: </span><span id="resultado"></span>
+
+	  <div id="divExterna">
+		<div id="divInterna"></div>
+	  </div>
+	  <span>Div externa: </span> <span id="resultadoDiv1"></span>
+	  <br>
+	  <span>Div interna: </span> <span id="resultadoDiv2"></span>
+      <hr />
+
+      <h3>Teclado</h3>
+      <span>Nome:</span>
+      <input type="text" id="teclado"/>
+      <span id="resultadoTecla">Resultado do evento sobre o input</span>
+      <hr />
+
+      <h3>Formulário</h3>
+      <form id="form">
+        <span>Nome:</span>
+        <input type="text" id="nome"/>
+
+        <span>E-mail:</span>
+        <input type="text" id="email"/>
+
+        <span>Motivo do contato:</span>
+        <select id="opcao">
+          <option value="">-- Selecione --</option>
+          <option value="duvida">Dúvida</option>
+          <option value="sugestao">Sugestão</option>
+        </select>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>

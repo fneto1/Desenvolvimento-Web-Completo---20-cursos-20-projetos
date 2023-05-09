@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        #div1{
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+        }
+
+        .emDestaque{
+            background-color: red;
+        }
+
+    </style>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(() => {
+        
+        //trigger
+        $('#btn2').on('click', ()=>{
+            alert('Ação')
+        })
+
+        $('#btn1').on('click', ()=>{
+            $('#btn2').trigger('click')
+        })
+
+        //hover
+
+        $('#div1').hover((e)=>{
+            $(e.target).toggleClass('emDestaque')
+        })
+
+/*         $('#div1').on('mouseenter', (e)=>{
+            $(e.target).addClass('emDestaque')
+        })
+
+        $('#div1').on('mouseenter', (e)=>{
+            $(e.target).removeClass('emDestaque')
+        }) */
+
+      });
+    </script>
+
+    <title>jQuery</title>
+  </head>
+
+  <body>
+
+    <button id="btn1" type="button">Botão 01</button>
+    <button id="btn2" type="button">Botão 02</button>
+    <hr>
+    <div id="div1"></div>
+
+  </body>
+</html>

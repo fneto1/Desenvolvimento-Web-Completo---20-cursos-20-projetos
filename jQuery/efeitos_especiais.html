@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<style>
+			button {
+				margin-bottom: 5px;
+				width: 100px;
+			}
+
+			.div {
+				width: 100px;
+				height: 100px;
+			}
+
+			.div1 {
+				background-color: red
+			}
+
+			.div2 {
+				background-color: green
+			}
+
+			.div3 {
+				background-color: blue
+			}
+
+			.grupo {
+				padding: 25px;
+				float: left
+			}
+		</style>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(() => {
+				//hide, show
+				//$('#div1').hide(10000) //tempo em ms
+				//$('#div1').hide('medium') //slow, fast, medium
+				//$('#div1').show(10000)
+
+				//toggle
+				$('#btn1').on('click', ()=>{
+					$('#div1').toggle(1000)
+				})
+
+				//fade
+				//$('#div2').fadeOut(1000) //tempo em ms ou slow, fast, medium
+
+				//$('#div2').fadeIn(1000) //tempo em ms ou slow, fast, medium
+
+				//$('#div2').fadeToggle(1000) //tempo em ms ou slow, fast, medium
+
+				//$('#div2').fadeTo(1000, 0.2);
+				
+				$('#btn2').on('click', ()=>{
+					$('#div2').fadeToggle(1000)
+				})
+
+				//slide
+				//$('#div3').slideUp('fast'); //tempo em ms ou slow, fast, medium
+
+				//$('#div3').slideDown(1000); //tempo em ms ou slow, fast, medium
+
+				$('#btn3').on('click', () => {
+					$('#div3').slideToggle(1000);
+				});
+
+
+				
+			})
+		</script>
+	</head>
+
+	<body>
+		
+		<div class="grupo">
+			<button id="btn1" type="button">DIV 1</button>
+			<div id="div1" class="div div1"></div>
+		</div>
+
+		<div class="grupo">
+			<button id="btn2" type="button">DIV 2</button>
+			<div id="div2" class="div div2"></div>
+		</div>
+
+		<div class="grupo">
+			<button id="btn3" type="button">DIV 3</button>
+			<div id="div3" class="div div3"></div>
+		</div>
+			
+	</body>
+
+</html>

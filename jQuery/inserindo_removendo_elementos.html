@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(() => {
+
+        //inserção dentro da tag html
+        $('#lista1').prepend('<li>Item 0</li>')
+        $('#lista1').append('<li>Item 4</li>')
+        
+        $('#lista2').prepend('<div>Item 0</div>')
+        $('#lista2').append('<div>Item 4</div>')
+        
+        //inserção fora do elemento html
+        $('#lista1').before('<p>Antes da tag "li" </p>')
+        $('#lista1').after('<p>Depois da tag "/li"</p>')
+
+        $('#lista2').before('<p>Antes da tag "div" </p>')
+        $('#lista2').after('<p>Depois da tag "/div"</p>')
+
+        $('#linha').before('<p>Antes da tag "hr" </p>')
+        $('#linha').after('<p>Depois da tag "/hr"</p>')
+
+        //substituindo o html
+        $('#lista3').html('As li da lista 3 não existe mais')
+
+        //removendo
+        $('#linha2').remove()
+      });
+    </script>
+
+    <title>Recuperando e manipulando valores de inputs (text) e selects</title>
+  </head>
+
+  <body>
+    <ul id="lista1">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <div id="lista2">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <hr id="linha">
+
+    <ul id="lista3">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <hr id="linha2">
+  </body>
+</html>

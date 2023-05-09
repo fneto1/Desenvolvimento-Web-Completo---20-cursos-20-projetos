@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <title>Selecionando elementos - Parte 1</title>
+</head>
+
+<body>
+
+    <input class="exemplo1" type="text" placeholder="input 1">
+    <input type="text" placeholder="input 2">
+    <input type="text" placeholder="input 3">
+
+    <div class="lista1">
+        <div class="exemplo1">div 1</div>
+        <div class="exemplo2">div 2</div>
+        <div class="exemplo2">div 3</div>
+    </div>
+
+
+    <ul class="lista1">
+        <li class="exemplo1">opção 1</li>
+        <li class="exemplo2">opção 2</li>
+        <li class="exemplo2">opção 3</li>
+    </ul>
+
+    <ul class="lista2">
+        <li>opção 1</li>
+        <li class="exemplo2">opção 2</li>
+        <li class="exemplo2">opção 3</li>
+    </ul>
+
+</body>
+
+<script>
+
+    //Combinação de seletores
+
+        //selecionar elementos por classe de tag especifica
+        /*  console.log($('.exemplo1'));
+            console.log($('input.exemplo1'));
+            console.log($('div.exemplo1'));
+            console.log($('li.exemplo1')); */
+
+        //selecionar elementos por classe de classe especifica
+        /*  console.log($('.lista1 .exemplo2'));
+            console.log($('.lista2 .exemplo2'));
+
+            console.log($('.lista1 div.exemplo2'));
+        */
+
+    //Atuação sobre o array de retorno dos elementos selecionados
+
+    console.log($('.lista1 .exemplo2'));
+
+    console.log($('.lista1 .exemplo2')[2]);
+    console.log($('.lista1 .exemplo2:first'));
+    console.log($('.lista1 .exemplo2:last'));
+    console.log($('.lista1 .exemplo2:even'));
+    console.log($('.lista1 .exemplo2:odd'));
+
+
+
+</script>
+
+</html>

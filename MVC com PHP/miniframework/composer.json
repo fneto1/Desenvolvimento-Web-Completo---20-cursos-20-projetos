@@ -1,0 +1,19 @@
+{
+  "name": "vendor/miniframework",
+  "require": {
+    "php": ">=7.0",
+    "ext-pdo": "*"
+  },
+  "authors": [
+    {
+      "name": "Francisco",
+      "email": "fasneto2@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/",
+      "MF\\": "vendor/MF/"
+    }
+  }
+}

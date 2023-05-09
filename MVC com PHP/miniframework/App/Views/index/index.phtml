@@ -1,0 +1,9 @@
+<h1>Index</h1>
+<hr>
+
+<?php
+    foreach ($this->view->dados as $indice => $produto){
+        echo $produto['ID']. ' - '.$produto['DESCRICAO']. ' - '.$produto['PRECO'];
+        echo '<br>';
+    }
+    //echo 'Chegamos ao IndexController e disparamos a action index';
